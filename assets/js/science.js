@@ -231,4 +231,29 @@ window.onload = function () {
 	setInterval(function(){updateChart_2()}, updateInterval);
 	setInterval(function(){updateChart_3()}, updateInterval);
 	setInterval(function(){updateChart_4()}, updateInterval);
+
+	document.getElementById("exportChart_1").addEventListener("click",function(){
+    	chart_1.exportChart({format: "jpeg"});
+    });
+
+    document.getElementById("exportChart_2").addEventListener("click",function(){
+    	chart_2.exportChart({format: "jpeg"});
+    });
+
+    document.getElementById("exportChart_3").addEventListener("click",function(){
+    	chart_3.exportChart({format: "jpeg"});
+    });
+
+    document.getElementById("exportChart_4").addEventListener("click",function(){
+    	chart_4.exportChart({format: "jpeg"});
+    });
+
+    document.getElementById("exportChart_5").addEventListener("click",function(){
+    	chart_5.exportChart({format: "jpeg"});
+    });
+
+    document.getElementById("exportChart_6").addEventListener("click",function(){
+    	chart_6.exportChart({format: "jpeg"});
+    });
+
 }
