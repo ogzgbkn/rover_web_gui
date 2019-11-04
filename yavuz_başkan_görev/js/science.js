@@ -63,17 +63,22 @@ arm19uiSubsTopic.subscribe(function (msg) {
     }
 
     var chart_1 = new CanvasJS.Chart("chartContainer_1", {
+
+    	theme: "dark2",
 		title :{
 			text: "Robotic Arm"
 		},
 		axisX:{
-	        interval: 10,
+	        interval: 10
 	    },
 		axisY: {
-			interval: 10,
+			gridThickness: 0,
+			interval: 10
 		},
 		data: [{
 			type: "line",
+			lineThickness: 20,
+			lineColor:"white",
 			dataPoints: dps_1
 		}]
 	});
