@@ -39,8 +39,8 @@ window.onload = function(){
 	function robotic_arm_move(){
 	     
 		joint_2_angle_int -= 0.2;
-		joint_3_angle_int += 0.2;
-		joint_5_angle_int -= 0.2;
+		//joint_3_angle_int += 0.2;
+		//joint_5_angle_int -= 0.2;
 
 		var joint_2_piece_angle = joint_2_angle_int + 90;
 		var joint_3_piece_angle = joint_3_angle_int + joint_2_angle_int;
