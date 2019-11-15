@@ -102,27 +102,22 @@ var utah_GM_map = {
 };
 
 
-var utah_GM_sat_map_bound = new mapboxgl.LngLatBounds([-110.798434, 38.401502], [-110.785805, 38.411034]);
-var utah_GM_sat_map = {
+//var utah_bing_sat_map_bound = new mapboxgl.LngLatBounds([-110.798434, 38.401502], [-110.785805, 38.411034]);
+var utah_bing_sat_map = {
     "version": 8,
     "sources": {
-        "utah_GM_sat_map_tile": {
+        "utah_bing_sat_map_tile": {
             "type": "raster",
-            // "url": "mapbox://map-id"
-            //"url": location.origin+location.pathname+"itu-ayazaga"
-            "tiles": [location.origin + "/maps/UTAH_GM_comp_area_sat/{z}/{x}/{y}.jpg.tile"],
-            //"maxzoom": 19,
-            //"minzoom": 14,
-
+            "tiles": [location.origin + "/maps/UTAH_bing_comp_area_sat/{z}/{x}/{y}.jpg.tile"],
         }
     },
     "layers": [{
-        "id": "utah_GM_sat_map_tile",
+        "id": "utah_bing_sat_map_tile",
         "type": "raster",
-        "source": "utah_GM_sat_map_tile",
+        "source": "utah_bing_sat_map_tile",
         "minzoom": 0,
         "maxzoom": 19
-        }]
+    }]
 };
 
 
@@ -622,15 +617,15 @@ $("#map-offline-3").click(function () {
 $("#map-offline-4").click(function () {
     map.setStyle(utah_GM_map);
     map.setCenter([-110.792119, 38.406268]);
-    map.setMaxBounds(utah_GM_map_bound);
+    //map.setMaxBounds(utah_GM_map_bound);
     map.setZoom(15);
 });
 
 $("#map-offline-5").click(function () {
-    map.setStyle(utah_GM_sat_map);
+    map.setStyle(utah_bing_sat_map);
     map.setCenter([-110.792119, 38.406268]);
-    map.setMaxBounds(utah_GM_sat_map_bound);
-    map.setZoom(18);
+    //map.setMaxBounds(utah_GM_sat_map_bound);
+    map.setZoom(16);
 });
 
 
